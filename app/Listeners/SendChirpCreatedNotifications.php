@@ -6,7 +6,6 @@ use App\Events\ChirpCreated;
 use App\Models\User;
 use App\Notifications\NewChirp;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class SendChirpCreatedNotifications implements ShouldQueue
 {
@@ -23,7 +22,7 @@ class SendChirpCreatedNotifications implements ShouldQueue
     /**
      * Handle the event.
      *
-     * @param ChirpCreated $event
+     * @param  ChirpCreated  $event
      * @return void
      */
     public function handle(ChirpCreated $event)
